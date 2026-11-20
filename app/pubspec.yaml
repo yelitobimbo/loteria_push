@@ -1,0 +1,27 @@
+name: loteria_push
+description: Lotería Push - notificaciones push (FCM) bien hechas, jugando a la Lotería.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Consejo: instala con `flutter pub add firebase_core firebase_messaging` para que
+  # pub elija versiones compatibles entre sí con TU versión de Flutter.
+  firebase_core: ">=3.0.0 <6.0.0"
+  firebase_messaging: ">=15.0.0 <19.0.0"
+  # Solo para CREAR los canales de Android (importancia por tipo de aviso).
+  flutter_local_notifications: ">=20.1.0 <24.0.0"
+  http: ^1.2.0
+  shared_preferences: ^2.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true

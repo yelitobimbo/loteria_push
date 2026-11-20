@@ -1,0 +1,12 @@
+{
+  "name": "loteria-push-servidor",
+  "version": "1.0.0",
+  "description": "El cantor de Lotería Push: sala, reglas y envío de notificaciones push (FCM).",
+  "main": "servidor.js",
+  "scripts": {
+    "start": "node servidor.js",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=20" },
+  "optionalDependencies": { "firebase-admin": "^13.0.0" }
+}
