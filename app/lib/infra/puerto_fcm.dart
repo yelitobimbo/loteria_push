@@ -15,8 +15,9 @@ class PuertoFcm implements PuertoPush {
 
   PermisoPush _mapear(AuthorizationStatus s) => switch (s) {
         AuthorizationStatus.authorized || AuthorizationStatus.provisional => PermisoPush.concedido,
-        AuthorizationStatus.denied => PermisoPush.denegado,
         AuthorizationStatus.notDetermined => PermisoPush.sinPreguntar,
+        // denied, deniedPermanently (nuevo en firebase_messaging 17) y cualquier otro
+        _ => PermisoPush.denegado,
       };
 
   MensajePush _aMensaje(RemoteMessage m) => MensajePush(
